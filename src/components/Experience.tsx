@@ -8,6 +8,7 @@ interface ExperienceProps {
     demoLink?: string;
     startDate: string;
     endDate?: string;
+    projectType: string;
     children: JSX.Element[] | JSX.Element;
 }
 export const Experience = ({
@@ -18,6 +19,7 @@ export const Experience = ({
     demoLink,
     startDate,
     endDate,
+    projectType,
     children
 }: ExperienceProps) => {
     return (
@@ -25,6 +27,7 @@ export const Experience = ({
             <h4>
                 {title}: {startDate} - {endDate}
             </h4>
+            <h5>{projectType}</h5>
             {children}
             {hasGit ? (
                 <button type="button" onClick={() => window.open(gitLink, "_blank")}>
