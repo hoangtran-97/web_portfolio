@@ -25,7 +25,7 @@ export const Experience = ({
     return (
         <>
             <h4>
-                {title}: {startDate} - {endDate}
+                {title}: {startDate} {endDate ? "-" : null} {endDate}
             </h4>
             <h5>{projectType}</h5>
             {children}
