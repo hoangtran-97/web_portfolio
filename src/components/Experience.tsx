@@ -1,4 +1,5 @@
 import React from "react";
+import colors from "../constants/colors";
 
 interface ExperienceProps {
     title: string;
@@ -23,7 +24,7 @@ export const Experience = ({
     children
 }: ExperienceProps) => {
     return (
-        <>
+        <div style={styles.container}>
             <h4>
                 {title}: {startDate} {endDate ? "-" : null} {endDate}
             </h4>
@@ -39,6 +40,20 @@ export const Experience = ({
                     Live Demo
                 </button>
             ) : null}
-        </>
+        </div>
     );
+};
+const styles = {
+    container: {
+        backgroundColor: colors.sub,
+        display: "flex",
+        flexDirection: "column" as "column",
+        justifyContent: "center",
+        alignItems: "center",
+        borderRadius: "10px",
+        padding: "20px",
+        marginTop: "20px",
+        marginBottom: "20px",
+        boxShadow: "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)"
+    }
 };
