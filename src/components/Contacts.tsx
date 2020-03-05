@@ -60,16 +60,13 @@ const styles = {
         justifyContent: "center",
         alignItems: "center",
         borderRadius: "10px",
-        margin: "auto",
         padding: "20px",
-        width: "70vw",
         marginTop: "20px",
         marginBottom: "20px",
         boxShadow: "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)"
     },
     linkContainer: {
         display: "flex",
-        flexDirection: "row" as "row",
-        justifyContent: "space-around"
+        flexDirection: "row" as "row"
     }
 };
