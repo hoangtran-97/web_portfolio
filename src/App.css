@@ -1,3 +1,39 @@
 body {
     background-color: #313715;
 }
+.container {
+    display: grid;
+    gap: 20px;
+    grid-template-areas:
+        "hdr hdr hdr"
+        "cnt cnt nav"
+        "skl skl nav"
+        "exp exp nav";
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 200px 100px 100px 1fr;
+}
+
+.header {
+    grid-area: hdr;
+    background-color: aqua;
+}
+
+.contacts {
+    grid-area: cnt;
+    background-color: rebeccapurple;
+}
+
+.skills {
+    grid-area: skl;
+    background-color: bisque;
+}
+
+.experiences {
+    grid-area: exp;
+    background-color: orange;
+}
+
+.navigation {
+    grid-area: nav;
+    background-color: blue;
+}
