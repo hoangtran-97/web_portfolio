@@ -4,6 +4,7 @@ import {Header} from "./components/Header";
 import {Contacts} from "./components/Contacts";
 import {Experience} from "./components/Experience";
 import {Skills} from "./components/Skills";
+import {Navigation} from "./components/Navigation";
 enum projectTypes {
     gmo = "GMO-Z RUNSYSTEM - React Native Developer",
     personal = "Personal project",
@@ -16,13 +17,15 @@ function App() {
             <div className="header">
                 <Header></Header>
             </div>
-            <div className="contacts">
+            <div className="contacts" id="nav-contacts">
                 <Contacts></Contacts>
             </div>
             <div className="skills">
                 <Skills></Skills>
             </div>
-            <div className="navigation">Sidebar</div>
+            <div className="navigation">
+                <Navigation></Navigation>
+            </div>
             <div className="experiences">
                 <Experience title="DMS" startDate="July. 2019" endDate="Oct. 2019" projectType={projectTypes.gmo}>
                     <p>React Native application for Kangaroo client.</p>

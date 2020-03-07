@@ -51,7 +51,6 @@ const styles = {
     },
     container: {
         height: "100px",
-        // backgroundColor: colors.sub,
         display: "flex",
         flexDirection: "row" as "row",
         justifyContent: "space-around",

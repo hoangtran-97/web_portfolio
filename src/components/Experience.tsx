@@ -25,9 +25,9 @@ export const Experience = ({
 }: ExperienceProps) => {
     return (
         <div style={styles.container}>
-            <h4>
+            <h2>
                 {title}: {startDate} {endDate ? "-" : null} {endDate}
-            </h4>
+            </h2>
             <h5>{projectType}</h5>
             {children}
             {hasGit ? (
@@ -48,9 +48,10 @@ const styles = {
         display: "inline-block",
         backgroundColor: colors.gray,
         borderRadius: "5px",
-        padding: "5px",
+        padding: "10px",
         boxShadow: "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)",
-        color: colors.highlight
+        color: colors.highlight,
+        fontSize: 14
     },
     button: {
         backgroundColor: colors.highlight,
