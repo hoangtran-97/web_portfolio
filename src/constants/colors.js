@@ -8,12 +8,14 @@ const color = {
     kiwiGreen: "#8EED4D",
     black: "#000000",
     plantinum: "#E9E9E9",
-    nyanza: "#E8F5D1"
+    nyanza: "#E8F5D1",
+    arsenic: "#424242"
 };
 export default {
     sub: color.turtleGreen,
     main: color.pullmanGreen,
     background: color.plantinum,
     text: color.black,
-    highlight: color.white
+    highlight: color.white,
+    gray: color.arsenic
 };

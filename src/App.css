@@ -1,39 +1,61 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap");
 body {
-    background-color: #313715;
+    background-color: black;
+    font-size: 12px;
+    font-family: "Roboto", sans-serif;
 }
 .container {
     display: grid;
     gap: 20px;
     grid-template-areas:
-        "hdr hdr hdr"
-        "cnt cnt nav"
-        "skl skl nav"
-        "exp exp nav";
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 200px 100px 100px 1fr;
+        "hdr"
+        "nav"
+        "cnt"
+        "skl"
+        "exp ";
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 100px 100px 1fr;
 }
-
 .header {
     grid-area: hdr;
-    background-color: aqua;
 }
 
 .contacts {
     grid-area: cnt;
-    background-color: rebeccapurple;
 }
 
 .skills {
     grid-area: skl;
-    background-color: bisque;
 }
 
 .experiences {
     grid-area: exp;
-    background-color: orange;
+    display: grid;
+    gap: 20px;
+    grid-auto-rows: auto;
 }
 
 .navigation {
     grid-area: nav;
     background-color: blue;
+}
+
+@media (min-width: 900px) {
+    .container {
+        display: grid;
+        gap: 20px;
+        grid-template-areas:
+            "hdr hdr hdr hdr hdr hdr"
+            "cnt cnt cnt cnt cnt nav"
+            "skl skl skl skl skl nav"
+            "exp exp exp exp exp nav";
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 100px 100px 100px 1fr;
+    }
+    .experiences {
+        grid-area: exp;
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(2, 1fr);
+    }
 }

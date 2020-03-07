@@ -31,12 +31,12 @@ export const Experience = ({
             <h5>{projectType}</h5>
             {children}
             {hasGit ? (
-                <button type="button" onClick={() => window.open(gitLink, "_blank")}>
+                <button style={styles.button} type="button" onClick={() => window.open(gitLink, "_blank")}>
                     GitHub
                 </button>
             ) : null}
             {hasDemo ? (
-                <button type="button" onClick={() => window.open(demoLink, "_blank")}>
+                <button style={styles.button} type="button" onClick={() => window.open(demoLink, "_blank")}>
                     Live Demo
                 </button>
             ) : null}
@@ -45,8 +45,17 @@ export const Experience = ({
 };
 const styles = {
     container: {
-        // display: "inline-block",
-        // backgroundColor: colors.sub,
-        // boxShadow: "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)"
+        display: "inline-block",
+        backgroundColor: colors.gray,
+        borderRadius: "5px",
+        padding: "5px",
+        boxShadow: "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)",
+        color: colors.highlight
+    },
+    button: {
+        backgroundColor: colors.highlight,
+        padding: "5px",
+        borderRadius: "5px",
+        marginRight: "10px"
     }
 };
