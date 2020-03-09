@@ -194,7 +194,6 @@ function App() {
                     title="Porfolio"
                     startDate="Feb. 2020"
                     hasGit
-                    hasDemo
                     projectType={projectTypes.personal}
                     gitLink="https://github.com/hoangtran-97/web_portfolio"
                 >
@@ -209,7 +208,6 @@ function App() {
                     title="Expense Tracker"
                     startDate="Feb. 2020"
                     hasGit
-                    hasDemo
                     projectType={projectTypes.wip}
                     gitLink="https://github.com/hoangtran-97/web_expenseTracker"
                 >
