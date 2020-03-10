@@ -10,7 +10,7 @@ export const Skills = () => {
 const styles = {
     container: {
         fontWeight: 700,
-        fontSize: 16,
+        fontSize: 18,
         display: "flex",
         justifyContent: "center",
         alignItems: "center",

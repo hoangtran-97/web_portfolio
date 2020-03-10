@@ -4,7 +4,7 @@ import colors from "../constants/colors";
 export const Header = () => {
     return (
         <h1 className="animated-text" style={styles.header}>
-            Hoang Tran - Full-Stack Developer
+            Hoang Tran <br /> Full-Stack Developer
         </h1>
     );
 };
