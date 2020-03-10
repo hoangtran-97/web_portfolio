@@ -14,7 +14,7 @@ const styles = {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        height: "100px",
+        height: "200px",
         borderRadius: "5px",
         boxShadow: "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)",
         paddingLeft: "10px",
@@ -23,6 +23,8 @@ const styles = {
         color: "white",
         backgroundColor: "rgba(68, 62, 62, 0.7)",
         backgroundBlendMode: "color",
-        backgroundSize: "cover"
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat"
     }
 };

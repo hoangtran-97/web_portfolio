@@ -24,7 +24,7 @@ export const Experience = ({
     children
 }: ExperienceProps) => {
     return (
-        <div style={styles.container}>
+        <div style={styles.container} className="card">
             <h2>
                 {title}: {startDate} {endDate ? "-" : null} {endDate}
             </h2>

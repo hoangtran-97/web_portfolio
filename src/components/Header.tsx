@@ -3,16 +3,16 @@ import colors from "../constants/colors";
 
 export const Header = () => {
     return (
-        <h1 style={styles.header}>
-            Hoang Tran <br /> Full-Stack Developer
+        <h1 className="animated-text" style={styles.header}>
+            Hoang Tran - Full-Stack Developer
         </h1>
     );
 };
 const styles = {
     header: {
-        backgroundColor: colors.gray,
+        // backgroundColor: colors.gray,
         color: colors.highlight,
-        width: "300px",
+        width: "100%",
         padding: "10px",
         margin: "auto",
         textAlign: "center" as "center",

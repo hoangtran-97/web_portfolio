@@ -6,6 +6,7 @@ body {
     background-color: black;
     font-size: 12px;
     font-family: "Roboto", sans-serif;
+    padding: 20px;
 }
 .container {
     display: grid;
@@ -41,6 +42,28 @@ body {
 .navigation {
     grid-area: nav;
 }
+.card {
+    transition: all 500ms;
+}
+.card:hover {
+    box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em, rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
+    transform: translateY(-3px) scale(1.05);
+}
+.animated-text {
+    color: white;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    animation: typing 2.5s steps(40, end);
+}
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 400px;
+    }
+}
 
 @media (min-width: 900px) {
     .container {
@@ -52,7 +75,7 @@ body {
             "skl skl skl skl skl nav"
             "exp exp exp exp exp nav";
         grid-template-columns: repeat(6, 1fr);
-        grid-template-rows: 100px 300px 100px 1fr;
+        grid-template-rows: 100px 300px 200px 1fr;
     }
     .experiences {
         grid-area: exp;

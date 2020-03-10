@@ -62,6 +62,8 @@ const styles = {
         backgroundImage: "url(https://source.unsplash.com/700x200/?linkedin)",
         backgroundColor: "rgba(68, 62, 62, 0.7)",
         backgroundBlendMode: "color",
-        backgroundSize: "cover"
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat"
     }
 };
