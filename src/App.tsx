@@ -85,8 +85,9 @@ function App() {
                     startDate="Dec. 2019"
                     hasDemo
                     hasGit
-                    projectType={projectTypes.offline}
+                    projectType={projectTypes.personal}
                     gitLink="https://github.com/hoangtran-97/web_travelPlanner"
+                    demoLink="https://hoangtranxamk-travel-planner.herokuapp.com/"
                 >
                     <p>Website</p>
                     <ul>
