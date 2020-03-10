@@ -17,7 +17,7 @@ body {
         "skl"
         "exp ";
     grid-template-columns: 1fr;
-    grid-template-rows: 100px 100px 100px 1fr;
+    grid-template-rows: 100px 100px 300px 1fr;
 }
 .header {
     grid-area: hdr;
@@ -52,13 +52,13 @@ body {
             "skl skl skl skl skl nav"
             "exp exp exp exp exp nav";
         grid-template-columns: repeat(6, 1fr);
-        grid-template-rows: 100px 100px 100px 1fr;
+        grid-template-rows: 100px 300px 100px 1fr;
     }
     .experiences {
         grid-area: exp;
         display: grid;
         gap: 20px;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     }
     .navigation {
         position: -webkit-sticky;

@@ -20,13 +20,13 @@ function App() {
             <div className="contacts" id="nav-contacts">
                 <Contacts></Contacts>
             </div>
-            <div className="skills">
+            <div className="skills" id="nav-skills">
                 <Skills></Skills>
             </div>
             <div className="navigation">
                 <Navigation></Navigation>
             </div>
-            <div className="experiences">
+            <div className="experiences" id="nav-experiences">
                 <Experience title="DMS" startDate="July. 2019" endDate="Oct. 2019" projectType={projectTypes.gmo}>
                     <p>React Native application for Kangaroo client.</p>
                     <ul>
