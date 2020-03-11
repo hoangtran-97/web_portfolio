@@ -27,7 +27,7 @@ function App() {
                 <Navigation></Navigation>
             </div>
             <div className="experiences" id="nav-experiences">
-                <Experience title="DMS" startDate="July. 2019" endDate="Oct. 2019" projectType={projectTypes.gmo}>
+                <Experience title="DMS" startDate="Jul. 2019" endDate="Oct. 2019" projectType={projectTypes.gmo}>
                     <p>React Native application for Kangaroo client.</p>
                     <ul>
                         <li>
@@ -65,6 +65,20 @@ function App() {
                         <li>Contributed to features suggestion and bug fixing.</li>
                     </ul>
                     <p>Technologies: React Native, Redux, Realm, Google Map, REST API</p>
+                </Experience>
+                <Experience
+                    title="Porfolio"
+                    startDate="Feb. 2020"
+                    hasGit
+                    projectType={projectTypes.personal}
+                    gitLink="https://github.com/hoangtran-97/web_portfolio"
+                >
+                    <p>Website - this site</p>
+                    <ul>
+                        <li>Written with React and Typescript.</li>
+                        <li>Designed to by as minimal as possible</li>
+                    </ul>
+                    <p>Technologies: HTML, CSS, React, React-router, Typescript</p>
                 </Experience>
                 <Experience
                     title="Moments"
@@ -190,20 +204,6 @@ function App() {
                         <li>You can play the piano.</li>
                     </ul>
                     <p>Technologies: HTML, CSS, JavaScript</p>
-                </Experience>
-                <Experience
-                    title="Porfolio"
-                    startDate="Feb. 2020"
-                    hasGit
-                    projectType={projectTypes.personal}
-                    gitLink="https://github.com/hoangtran-97/web_portfolio"
-                >
-                    <p>Website - this site</p>
-                    <ul>
-                        <li>Written with React and Typescript.</li>
-                        <li>Designed to by as minimal as possible</li>
-                    </ul>
-                    <p>Technologies: HTML, CSS, React, React-router, Typescript</p>
                 </Experience>
                 <Experience
                     title="Expense Tracker"
