@@ -23,7 +23,6 @@ const styles = {
     container: {
         fontSize: 20,
         fontWeight: 800,
-        backgroundColor: colors.gray,
         color: colors.highlight,
         display: "flex",
         flexDirection: "column" as "column",
