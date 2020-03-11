@@ -81,6 +81,22 @@ function App() {
                     <p>Technologies: HTML, CSS, React, React-router, Typescript</p>
                 </Experience>
                 <Experience
+                    title="Weather Journal"
+                    startDate="Jan. 2020"
+                    hasDemo
+                    hasGit
+                    projectType={projectTypes.personal}
+                    gitLink="https://github.com/hoangtran-97/web_weatherJournal"
+                    demoLink="https://hoangtranxamk-weather-journal.herokuapp.com/"
+                >
+                    <p>Website</p>
+                    <ul>
+                        <li>Gather weather data based on zipcodes with Openweathermap API. </li>
+                        <li>Animated weather and changed dynamically based on current weather.</li>
+                    </ul>
+                    <p>Technologies: HTML, CSS, Express, Node, REST API</p>
+                </Experience>
+                <Experience
                     title="Moments"
                     startDate="Jul. 2019"
                     projectType={projectTypes.personal}
@@ -144,22 +160,7 @@ function App() {
                     </ul>
                     <p>Technologies: HTML, CSS, CSS Grid</p>
                 </Experience>
-                <Experience
-                    title="Weather Journal"
-                    startDate="Jan. 2020"
-                    hasDemo
-                    hasGit
-                    projectType={projectTypes.personal}
-                    gitLink="https://github.com/hoangtran-97/web_weatherJournal"
-                    demoLink="https://hoangtranxamk-weather-journal.herokuapp.com/"
-                >
-                    <p>Website</p>
-                    <ul>
-                        <li>Gather weather data based on zipcodes with Openweathermap API. </li>
-                        <li>Animated weather and changed dynamically based on current weather.</li>
-                    </ul>
-                    <p>Technologies: HTML, CSS, Express, Node, REST API</p>
-                </Experience>
+
                 <Experience
                     title="Job board"
                     startDate="Dec. 2019"
