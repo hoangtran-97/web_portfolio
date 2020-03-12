@@ -15,6 +15,9 @@ export const Navigation = () => {
                 <HashLink to="/pathLink#nav-experiences" style={styles.link} className="nav-item" smooth>
                     Projects
                 </HashLink>
+                <HashLink to="/pathLink#nav-blog" style={styles.link} className="nav-item" smooth>
+                    Blog
+                </HashLink>
             </div>
         </Router>
     );
