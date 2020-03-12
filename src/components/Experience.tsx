@@ -31,32 +31,36 @@ export const Experience = ({
             </h2>
             <h5>{projectType}</h5>
             {children}
-            {hasGit ? (
-                <button
-                    style={styles.button}
-                    type="button"
-                    onClick={() => window.open(gitLink, "_blank")}
-                    className="hvr-underline-from-center"
-                >
-                    GitHub <FiGithub style={styles.icon}></FiGithub>
-                </button>
-            ) : null}
-            {hasDemo ? (
-                <button
-                    style={styles.button}
-                    type="button"
-                    onClick={() => window.open(demoLink, "_blank")}
-                    className="hvr-underline-from-center"
-                >
-                    Live Demo <FiZap style={styles.icon}></FiZap>
-                </button>
-            ) : null}
+            <div style={styles.buttonContainer} className="button-container">
+                {hasGit ? (
+                    <button
+                        style={styles.button}
+                        type="button"
+                        onClick={() => window.open(gitLink, "_blank")}
+                        className="hvr-underline-from-center"
+                    >
+                        GitHub <FiGithub style={styles.icon}></FiGithub>
+                    </button>
+                ) : null}
+                {hasDemo ? (
+                    <button
+                        style={styles.button}
+                        type="button"
+                        onClick={() => window.open(demoLink, "_blank")}
+                        className="hvr-underline-from-center"
+                    >
+                        Live Demo <FiZap style={styles.icon}></FiZap>
+                    </button>
+                ) : null}
+            </div>
         </div>
     );
 };
 const styles = {
     container: {
-        display: "inline-block",
+        display: "flex",
+        flexDirection: "column" as "column",
+        justifyContent: "flex-start",
         backgroundColor: colors.gray,
         borderRadius: "5px",
         padding: "10px",
@@ -65,6 +69,7 @@ const styles = {
         fontSize: 14
     },
     button: {
+        height: "40px",
         color: colors.text,
         fontSize: 14,
         backgroundColor: colors.highlight,
@@ -78,5 +83,11 @@ const styles = {
         width: 10,
         height: 10,
         color: colors.text
+    },
+    buttonContainer: {
+        display: "flex",
+        flexDirection: "row" as "row",
+        flex: 1,
+        alignItems: "flex-end"
     }
 };
