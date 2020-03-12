@@ -16,7 +16,8 @@ body {
         "nav"
         "cnt"
         "skl"
-        "exp ";
+        "exp"
+        "blg";
     grid-template-columns: 1fr;
     grid-template-rows: 100px 200px 300px 1fr;
 }
@@ -38,7 +39,9 @@ body {
     gap: 20px;
     grid-auto-rows: auto;
 }
-
+.blog {
+    grid-area: blg;
+}
 .navigation {
     grid-area: nav;
 }
@@ -54,9 +57,7 @@ body {
 .contact-link:hover {
     transform: translateY(-3px) scale(1.5);
 }
-.nav-item:hover {
-    transform: translate(15px);
-}
+
 .animated-text {
     color: white;
     overflow: hidden;
@@ -90,7 +91,8 @@ body {
             "hdr hdr hdr hdr hdr hdr"
             "cnt cnt cnt cnt cnt nav"
             "skl skl skl skl skl nav"
-            "exp exp exp exp exp nav";
+            "exp exp exp exp exp nav"
+            "blg blg blg blg blg nav";
         grid-template-columns: repeat(6, 1fr);
         grid-template-rows: 100px 300px 200px 1fr;
     }
@@ -105,5 +107,8 @@ body {
         position: sticky;
         top: 20px;
         height: 200px;
+    }
+    .nav-item:hover {
+        transform: translate(15px);
     }
 }
