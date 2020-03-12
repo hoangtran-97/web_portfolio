@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap");
+@import "./animation.css";
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: black;
+    font-size: 12px;
+    font-family: "Roboto", sans-serif;
+    padding: 20px;
+}
+.container {
+    display: grid;
+    gap: 20px;
+    grid-template-areas:
+        "hdr"
+        "nav"
+        "cnt"
+        "skl"
+        "exp"
+        "blg";
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 200px 300px 1fr;
+}
+.header {
+    grid-area: hdr;
+}
+
+.contacts {
+    grid-area: cnt;
+}
+
+.skills {
+    grid-area: skl;
+}
+
+.experiences {
+    grid-area: exp;
+    display: grid;
+    gap: 20px;
+    grid-auto-rows: auto;
+}
+.blog {
+    grid-area: blg;
+}
+.navigation {
+    grid-area: nav;
+}
+
+@media (min-width: 900px) {
+    .container {
+        display: grid;
+        gap: 20px;
+        grid-template-areas:
+            "hdr hdr hdr hdr hdr hdr"
+            "cnt cnt cnt cnt cnt nav"
+            "skl skl skl skl skl nav"
+            "exp exp exp exp exp nav"
+            "blg blg blg blg blg nav";
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 100px 300px 200px 1fr;
+    }
+    .experiences {
+        grid-area: exp;
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    }
+    .navigation {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 20px;
+        height: 200px;
+    }
+}
