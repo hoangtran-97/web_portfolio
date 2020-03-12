@@ -5,10 +5,11 @@ export const Blogs = () => {
     return (
         <>
             <h2 style={styles.header}>Blog Entries</h2>
-            <p>Content Comming Soon!</p>
+            <p style={styles.content}>Content Comming Soon!</p>
         </>
     );
 };
 const styles = {
-    header: {color: colors.highlight, textAlign: "center" as "center"}
+    header: {color: colors.highlight, textAlign: "center" as "center"},
+    content: {color: colors.highlight}
 };

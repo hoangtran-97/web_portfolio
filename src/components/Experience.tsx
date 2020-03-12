@@ -54,9 +54,11 @@ const styles = {
         fontSize: 14
     },
     button: {
+        fontSize: 14,
         backgroundColor: colors.highlight,
-        padding: "5px",
-        borderRadius: "5px",
-        marginRight: "10px"
+        padding: "10px",
+        borderRadius: "10px",
+        marginRight: "10px",
+        boxShadow: "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)"
     }
 };
