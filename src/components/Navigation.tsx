@@ -1,20 +1,20 @@
 import React from "react";
-import {HashLink as Link} from "react-router-hash-link";
+import {HashLink} from "react-router-hash-link";
 import {BrowserRouter as Router} from "react-router-dom";
 import colors from "../constants/colors";
 export const Navigation = () => {
     return (
         <Router>
             <div style={styles.container}>
-                <Link to="/pathLink#nav-contacts" style={styles.link} className="nav-item">
+                <HashLink to="/pathLink#nav-contacts" style={styles.link} className="nav-item" smooth>
                     Contacts
-                </Link>
-                <Link to="/pathLink#nav-skills" style={styles.link} className="nav-item">
+                </HashLink>
+                <HashLink to="/pathLink#nav-skills" style={styles.link} className="nav-item" smooth>
                     Skills
-                </Link>
-                <Link to="/pathLink#nav-experiences" style={styles.link} className="nav-item">
+                </HashLink>
+                <HashLink to="/pathLink#nav-experiences" style={styles.link} className="nav-item" smooth>
                     Projects
-                </Link>
+                </HashLink>
             </div>
         </Router>
     );
