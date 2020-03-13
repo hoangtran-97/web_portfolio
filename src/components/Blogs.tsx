@@ -4,7 +4,7 @@ import colors from "../constants/colors";
 export const Blogs = () => {
     return (
         <>
-            <h2 style={styles.header}>Blog Entries</h2>
+            <h2 style={styles.content}>Blog Entries</h2>
             <p style={styles.content}>Content Comming Soon!</p>
         </>
     );
