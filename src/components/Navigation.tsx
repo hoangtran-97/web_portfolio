@@ -7,17 +7,13 @@ import {animated, useSpring} from "react-spring";
 
 const Menu = () => {
     return (
-        <Router>
+        <>
             <div style={styles.menuContainer}>
                 <NavigationPaths></NavigationPaths>
             </div>
-        </Router>
+        </>
     );
 };
-
-interface MobileMenuIconProps {
-    setToggle: (open: boolean) => void;
-}
 export const Navigation = () => {
     const [open, setToggle] = useState(false);
     const animation = useSpring({
@@ -59,17 +55,15 @@ export const Navigation = () => {
     };
     const MobileMenu = () => {
         return (
-            <Router>
-                <animated.div style={animation}>
-                    <NavigationPaths></NavigationPaths>
-                    <FiX
-                        onClick={() => {
-                            setToggle(false);
-                        }}
-                        style={styles.hamburgerCloseIcon}
-                    ></FiX>
-                </animated.div>
-            </Router>
+            <animated.div style={animation}>
+                <NavigationPaths></NavigationPaths>
+                <FiX
+                    onClick={() => {
+                        setToggle(false);
+                    }}
+                    style={styles.hamburgerCloseIcon}
+                ></FiX>
+            </animated.div>
         );
     };
     return <>{window.innerWidth > 900 ? <Menu></Menu> : <MobileMenuIcon></MobileMenuIcon>}</>;
@@ -86,24 +80,6 @@ const styles = {
         borderRadius: "5px",
         boxShadow: "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)",
         height: "100%"
-    },
-    mobileMenuContainer: {
-        fontSize: 20,
-        fontWeight: 800,
-        color: colors.highlight,
-        display: "flex",
-        flexDirection: "column" as "column",
-        justifyContent: "space-around",
-        alignItems: "flex-start",
-        borderRadius: "5px",
-        boxShadow: "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)",
-        position: "fixed" as "fixed",
-        top: "50px",
-        height: "300px",
-        width: "70vw",
-        backgroundColor: colors.gray,
-        zIndex: 9999,
-        paddingLeft: "20px"
     },
     hamburgerIcon: {
         color: colors.highlight,

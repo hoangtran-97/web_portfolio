@@ -1,6 +1,8 @@
 import React from "react";
 import colors from "../constants/colors";
 import {HashLink} from "react-router-hash-link";
+import {Switch, Route, Link} from "react-router-dom";
+import {Blogs} from "./Blogs";
 export const NavigationPaths = () => {
     return (
         <>
@@ -13,9 +15,9 @@ export const NavigationPaths = () => {
             <HashLink to="/pathLink#nav-experiences" style={styles.link} className="nav-item" smooth>
                 Projects
             </HashLink>
-            <HashLink to="/pathLink#nav-blog" style={styles.link} className="nav-item" smooth>
+            <Link to="/blogs" style={styles.link} className="nav-item">
                 Blog
-            </HashLink>
+            </Link>
         </>
     );
 };
