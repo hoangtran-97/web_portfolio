@@ -30,7 +30,6 @@ export const Navigation = () => {
                 <FiMenu
                     onClick={() => {
                         setToggle(!open);
-                        setTimeout(() => setToggle(false), 3000);
                         console.log(open);
                     }}
                     style={styles.hamburgerIcon}
