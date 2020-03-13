@@ -64,9 +64,9 @@ const styles = {
         borderRadius: "5px",
         boxShadow: "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)",
         position: "fixed" as "fixed",
-        height: "200px",
+        height: "300px",
         width: "70vw",
-        backgroundColor: "rgba(68, 62, 62, 0.7)",
+        backgroundColor: colors.gray,
         zIndex: 9999,
         paddingLeft: "20px"
     },

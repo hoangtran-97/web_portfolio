@@ -20,7 +20,7 @@ body {
         "exp"
         "blg";
     grid-template-columns: 1fr;
-    grid-template-rows: 100px 200px 300px 1fr;
+    grid-template-rows: 100px 1px 300px 1fr;
 }
 .header {
     grid-area: hdr;
