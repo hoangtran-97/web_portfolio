@@ -80,29 +80,19 @@ const styles = {
         zIndex: 9999,
         paddingLeft: "20px"
     },
-    icon: {
-        color: colors.highlight,
-        height: 25,
-        width: 25
-    },
     hamburgerIcon: {
         color: colors.highlight,
         height: 25,
         width: 25,
         position: "fixed" as "fixed",
         top: "20px",
-        left: "10px"
+        left: "10px",
+        zIndex: 9999
     },
     hamburgerCloseIcon: {
         color: colors.highlight,
         height: 25,
-        width: 25
-    },
-    menu: {
-        color: colors.highlight
-    },
-    test: {
-        backgroundColor: colors.highlight,
-        position: "fixed" as "fixed"
+        width: 25,
+        zIndex: 9999
     }
 };
