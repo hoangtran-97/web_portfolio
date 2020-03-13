@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-import {BrowserRouter as Router} from "react-router-dom";
 import colors from "../constants/colors";
 import {FiMenu, FiX} from "react-icons/fi";
 import {NavigationPaths} from "./NavigationPaths";
