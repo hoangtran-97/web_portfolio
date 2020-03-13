@@ -1,25 +1,45 @@
-import React from "react";
-import {HashLink} from "react-router-hash-link";
+import React, {useState} from "react";
 import {BrowserRouter as Router} from "react-router-dom";
 import colors from "../constants/colors";
-export const Navigation = () => {
+import {FiMenu} from "react-icons/fi";
+import {NavigationPaths} from "./NavigationPaths";
+
+const Menu = () => {
     return (
         <Router>
             <div style={styles.container}>
-                <HashLink to="/pathLink#nav-contacts" style={styles.link} className="nav-item" smooth>
-                    Contacts
-                </HashLink>
-                <HashLink to="/pathLink#nav-skills" style={styles.link} className="nav-item" smooth>
-                    Skills
-                </HashLink>
-                <HashLink to="/pathLink#nav-experiences" style={styles.link} className="nav-item" smooth>
-                    Projects
-                </HashLink>
-                <HashLink to="/pathLink#nav-blog" style={styles.link} className="nav-item" smooth>
-                    Blog
-                </HashLink>
+                <NavigationPaths></NavigationPaths>
             </div>
         </Router>
+    );
+};
+const MobileMenu = () => {
+    return (
+        <Router>
+            <div style={styles.container}>
+                <NavigationPaths></NavigationPaths>
+            </div>
+        </Router>
+    );
+};
+export const Navigation = () => {
+    const [open, setToggle] = useState(false);
+    const MobileMenuIcon = () => {
+        return (
+            <FiMenu
+                onClick={() => {
+                    setToggle(!open);
+                    console.log(open);
+                }}
+                style={styles.icon}
+            ></FiMenu>
+        );
+    };
+    return (
+        <>
+            {window.innerWidth > 900 ? <Menu></Menu> : <MobileMenuIcon></MobileMenuIcon>}
+            {open ? <MobileMenu></MobileMenu> : null}
+        </>
     );
 };
 const styles = {
@@ -35,8 +55,12 @@ const styles = {
         boxShadow: "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)",
         height: "100%"
     },
-    link: {
+    icon: {
         color: colors.highlight,
-        textDecoration: "none"
+        height: 25,
+        width: 25
+    },
+    menu: {
+        color: colors.highlight
     }
 };
