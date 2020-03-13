@@ -16,7 +16,7 @@ function App() {
                     <Route path="/blogs">
                         <Blogs></Blogs>
                     </Route>
-                    <Route path="/pathLink">
+                    <Route path="/">
                         <div className="container">
                             <div className="header">
                                 <Header></Header>

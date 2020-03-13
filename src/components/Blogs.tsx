@@ -5,7 +5,7 @@ import {FiArrowLeft} from "react-icons/fi";
 export const Blogs = () => {
     return (
         <>
-            <Link to="/pathLink" className="nav-item" style={styles.link}>
+            <Link to="/" className="nav-item" style={styles.link}>
                 <FiArrowLeft style={styles.icon}></FiArrowLeft> Back
             </Link>
             <h2 style={styles.header}>Blog Entries</h2>
