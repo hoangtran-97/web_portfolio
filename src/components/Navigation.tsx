@@ -3,6 +3,7 @@ import {BrowserRouter as Router} from "react-router-dom";
 import colors from "../constants/colors";
 import {FiMenu, FiX} from "react-icons/fi";
 import {NavigationPaths} from "./NavigationPaths";
+import {animated, useSpring} from "react-spring";
 
 const Menu = () => {
     return (
@@ -19,6 +20,30 @@ interface MobileMenuIconProps {
 }
 export const Navigation = () => {
     const [open, setToggle] = useState(false);
+    const animation = useSpring({
+        height: open ? "300px" : "0px",
+        opacity: open ? 1 : 0,
+        fontSize: 20,
+        fontWeight: 800,
+        color: colors.highlight,
+        display: "flex",
+        flexDirection: "column" as "column",
+        justifyContent: "space-around",
+        alignItems: "flex-start",
+        borderRadius: "5px",
+        boxShadow: "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)",
+        position: "fixed" as "fixed",
+        top: "50px",
+        width: "70vw",
+        backgroundColor: colors.gray,
+        zIndex: 9999,
+        paddingLeft: "20px",
+        pointerEvents: open ? "auto" : "none",
+        config: {
+            duration: open ? 300 : 250
+        }
+    });
+
     const MobileMenuIcon = () => {
         return (
             <div>
@@ -28,14 +53,14 @@ export const Navigation = () => {
                     }}
                     style={styles.hamburgerIcon}
                 ></FiMenu>
-                {open ? <MobileMenu></MobileMenu> : null}
+                <MobileMenu></MobileMenu>
             </div>
         );
     };
     const MobileMenu = () => {
         return (
             <Router>
-                <div style={styles.mobileMenuContainer}>
+                <animated.div style={animation}>
                     <NavigationPaths></NavigationPaths>
                     <FiX
                         onClick={() => {
@@ -43,7 +68,7 @@ export const Navigation = () => {
                         }}
                         style={styles.hamburgerCloseIcon}
                     ></FiX>
-                </div>
+                </animated.div>
             </Router>
         );
     };
