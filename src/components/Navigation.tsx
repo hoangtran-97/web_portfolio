@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-import {BrowserRouter as Router} from "react-router-dom";
 import colors from "../constants/colors";
 import {FiMenu, FiX} from "react-icons/fi";
 import {NavigationPaths} from "./NavigationPaths";
@@ -7,11 +6,9 @@ import {animated, useSpring} from "react-spring";
 
 const Menu = () => {
     return (
-        <Router>
-            <div style={styles.menuContainer}>
-                <NavigationPaths></NavigationPaths>
-            </div>
-        </Router>
+        <div style={styles.menuContainer}>
+            <NavigationPaths></NavigationPaths>
+        </div>
     );
 };
 
@@ -59,17 +56,15 @@ export const Navigation = () => {
     };
     const MobileMenu = () => {
         return (
-            <Router>
-                <animated.div style={animation}>
-                    <NavigationPaths></NavigationPaths>
-                    <FiX
-                        onClick={() => {
-                            setToggle(false);
-                        }}
-                        style={styles.hamburgerCloseIcon}
-                    ></FiX>
-                </animated.div>
-            </Router>
+            <animated.div style={animation}>
+                <NavigationPaths></NavigationPaths>
+                <FiX
+                    onClick={() => {
+                        setToggle(false);
+                    }}
+                    style={styles.hamburgerCloseIcon}
+                ></FiX>
+            </animated.div>
         );
     };
     return <>{window.innerWidth > 900 ? <Menu></Menu> : <MobileMenuIcon></MobileMenuIcon>}</>;
