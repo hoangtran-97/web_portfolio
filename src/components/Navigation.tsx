@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import {BrowserRouter as Router} from "react-router-dom";
 import colors from "../constants/colors";
-import {FiMenu} from "react-icons/fi";
+import {FiMenu, FiX} from "react-icons/fi";
 import {NavigationPaths} from "./NavigationPaths";
 
 const Menu = () => {
@@ -13,15 +13,10 @@ const Menu = () => {
         </Router>
     );
 };
-const MobileMenu = () => {
-    return (
-        <Router>
-            <div style={styles.mobileMenuContainer}>
-                <NavigationPaths></NavigationPaths>
-            </div>
-        </Router>
-    );
-};
+
+interface MobileMenuIconProps {
+    setToggle: (open: boolean) => void;
+}
 export const Navigation = () => {
     const [open, setToggle] = useState(false);
     const MobileMenuIcon = () => {
@@ -30,12 +25,26 @@ export const Navigation = () => {
                 <FiMenu
                     onClick={() => {
                         setToggle(!open);
-                        console.log(open);
                     }}
                     style={styles.hamburgerIcon}
                 ></FiMenu>
                 {open ? <MobileMenu></MobileMenu> : null}
             </div>
+        );
+    };
+    const MobileMenu = () => {
+        return (
+            <Router>
+                <div style={styles.mobileMenuContainer}>
+                    <NavigationPaths></NavigationPaths>
+                    <FiX
+                        onClick={() => {
+                            setToggle(false);
+                        }}
+                        style={styles.hamburgerCloseIcon}
+                    ></FiX>
+                </div>
+            </Router>
         );
     };
     return <>{window.innerWidth > 900 ? <Menu></Menu> : <MobileMenuIcon></MobileMenuIcon>}</>;
@@ -82,6 +91,11 @@ const styles = {
         position: "fixed" as "fixed",
         top: "20px",
         left: "10px"
+    },
+    hamburgerCloseIcon: {
+        color: colors.highlight,
+        height: 25,
+        width: 25
     },
     menu: {
         color: colors.highlight
