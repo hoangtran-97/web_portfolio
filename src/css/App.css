@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap");
+@import "./animation.css";
 html {
     scroll-behavior: smooth;
 }
@@ -16,9 +17,10 @@ body {
         "nav"
         "cnt"
         "skl"
-        "exp ";
+        "exp"
+        "blg";
     grid-template-columns: 1fr;
-    grid-template-rows: 100px 200px 300px 1fr;
+    grid-template-rows: 100px 1px 300px 1fr;
 }
 .header {
     grid-area: hdr;
@@ -38,48 +40,11 @@ body {
     gap: 20px;
     grid-auto-rows: auto;
 }
-
+.blog {
+    grid-area: blg;
+}
 .navigation {
     grid-area: nav;
-}
-.card,
-.contact-link,
-.nav-item {
-    transition: all 500ms;
-}
-.card:hover {
-    box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em, rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
-    transform: translateY(-3px) scale(1.05);
-}
-.contact-link:hover {
-    transform: translateY(-3px) scale(1.5);
-}
-.nav-item:hover {
-    transform: translate(15px);
-}
-.animated-text {
-    color: white;
-    overflow: hidden;
-    white-space: nowrap;
-    margin: 0 auto;
-    animation: typing 2.5s steps(40, end);
-}
-@keyframes typing {
-    from {
-        width: 0;
-    }
-    to {
-        width: 300px;
-    }
-}
-
-@keyframes anim {
-    from {
-        transform: rotateY(0deg);
-    }
-    to {
-        transform: rotateY(360deg);
-    }
 }
 
 @media (min-width: 900px) {
@@ -90,7 +55,8 @@ body {
             "hdr hdr hdr hdr hdr hdr"
             "cnt cnt cnt cnt cnt nav"
             "skl skl skl skl skl nav"
-            "exp exp exp exp exp nav";
+            "exp exp exp exp exp nav"
+            "blg blg blg blg blg nav";
         grid-template-columns: repeat(6, 1fr);
         grid-template-rows: 100px 300px 200px 1fr;
     }
