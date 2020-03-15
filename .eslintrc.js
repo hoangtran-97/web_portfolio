@@ -44,7 +44,8 @@ module.exports = {
         "no-unused-expressions": "off",
         quotes: [2, "double", {avoidEscape: true}],
         "no-unused-vars": [1, {vars: "all", args: "after-used", ignoreRestSiblings: false}],
-        "react/jsx-one-expression-per-line": "off"
+        "react/jsx-one-expression-per-line": "off",
+        "import/no-extraneous-dependencies": ["error", {devDependencies: true}]
     },
     globals: {
         fetch: false

@@ -8,8 +8,15 @@ interface CodeBlockProps {
 
 export const CodeBlock = ({children, language}: CodeBlockProps) => {
     return (
-        <SyntaxHighlighter language={language} style={okaidia}>
-            {children}
-        </SyntaxHighlighter>
+        <div style={styles.container}>
+            <SyntaxHighlighter language={language} style={okaidia}>
+                {children}
+            </SyntaxHighlighter>
+        </div>
     );
+};
+const styles = {
+    container: {
+        width: "100px"
+    }
 };
