@@ -1,15 +1,15 @@
 import React from "react";
 import {Prism as SyntaxHighlighter} from "react-syntax-highlighter";
-import {dark} from "react-syntax-highlighter/dist/esm/styles/prism";
+import {okaidia} from "react-syntax-highlighter/dist/esm/styles/prism";
 interface CodeBlockProps {
     children: JSX.Element[] | JSX.Element;
+    language: string;
 }
 
-export const CodeBlock = ({children}: CodeBlockProps) => {
+export const CodeBlock = ({children, language}: CodeBlockProps) => {
     return (
-        <SyntaxHighlighter language="javascript" style={dark}>
+        <SyntaxHighlighter language={language} style={okaidia}>
             {children}
-            <p>'(num) => num + 1';</p>
         </SyntaxHighlighter>
     );
 };
