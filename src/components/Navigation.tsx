@@ -11,10 +11,6 @@ const Menu = () => {
         </div>
     );
 };
-
-interface MobileMenuIconProps {
-    setToggle: (open: boolean) => void;
-}
 export const Navigation = () => {
     const [open, setToggle] = useState(false);
     const animation = useSpring({
