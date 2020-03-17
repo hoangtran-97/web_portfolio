@@ -25,24 +25,65 @@ export const BlogPost = ({children, dateTime, title}: BlogPostProps) => {
         width: open ? "300px" : "0px",
         opacity: open ? 1 : 0,
         config: {
+            duration: open ? 400 : 200
+        }
+    });
+    const mobileAnimation = useSpring({
+        height: open ? "600px" : "300px",
+        boxShadow: "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)",
+        backgroundColor: colors.gray,
+        color: colors.highlight,
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "flex-start",
+        borderRadius: "5px",
+        config: {
             duration: open ? 300 : 300
         }
     });
-    return (
-        <animated.div
-            style={animation}
-            onClick={() => {
-                setToggle(!open);
-            }}
-        >
-            <h3 style={styles.title}>
-                {dateTime}
-                <br />
-                {title}
-            </h3>
-            <animated.div style={childrenAnimation}>{children}</animated.div>
-        </animated.div>
-    );
+    const mobileChildrenAnimation = useSpring({
+        height: open ? "300px" : "0px",
+        opacity: open ? 1 : 0,
+        config: {
+            duration: open ? 400 : 200
+        }
+    });
+    const MobileTitle = () => {
+        return (
+            <animated.div
+                style={mobileAnimation}
+                onClick={() => {
+                    setToggle(!open);
+                }}
+            >
+                <h3 style={styles.title}>
+                    {dateTime}
+                    <br />
+                    {title}
+                </h3>
+                <animated.div style={mobileChildrenAnimation}>{children}</animated.div>
+            </animated.div>
+        );
+    };
+    const Title = () => {
+        return (
+            <animated.div
+                style={animation}
+                onClick={() => {
+                    setToggle(!open);
+                }}
+            >
+                <h3 style={styles.title}>
+                    {dateTime}
+                    <br />
+                    {title}
+                </h3>
+                <animated.div style={childrenAnimation}>{children}</animated.div>
+            </animated.div>
+        );
+    };
+    return <>{window.innerWidth > 900 ? <Title></Title> : <MobileTitle></MobileTitle>}</>;
 };
 const styles = {
     container: {
