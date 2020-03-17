@@ -18,6 +18,7 @@ export const BlogPost = ({children, dateTime, title}: BlogPostProps) => {
         alignItems: "center",
         justifyContent: "flex-start",
         borderRadius: "5px",
+        paddingBottom: open ? "10px" : "0px",
         config: {
             duration: open ? 300 : 300
         }
