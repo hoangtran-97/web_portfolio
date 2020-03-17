@@ -18,14 +18,14 @@ export const BlogPost = ({children, dateTime, title}: BlogPostProps) => {
         justifyContent: "flex-start",
         borderRadius: "5px",
         config: {
-            duration: open ? 1000 : 200
+            duration: open ? 300 : 300
         }
     });
     const childrenAnimation = useSpring({
         width: open ? "300px" : "0px",
         opacity: open ? 1 : 0,
         config: {
-            duration: open ? 1000 : 200
+            duration: open ? 300 : 300
         }
     });
     return (
