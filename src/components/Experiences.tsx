@@ -57,9 +57,11 @@ export const Experiences = () => {
                 <p>Website - this site</p>
                 <ul>
                     <li>Written with React and Typescript.</li>
-                    <li>Designed to by as minimal as possible</li>
+                    <li>Designed to be as minimal as possible.</li>
+                    <li>Animated with React Spring.</li>
+                    <li>Component designed with Storybook implementation.</li>
                 </ul>
-                <p>Technologies: HTML, CSS, React, React-router, Typescript</p>
+                <p>Technologies: HTML, CSS, React, React-router, Typescript, React Srping, Storybook</p>
             </Experience>
             <Experience
                 title="Weather Journal"
