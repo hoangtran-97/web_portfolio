@@ -1,15 +1,38 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import colors from "../../constants/colors";
 import {animated, useSpring} from "react-spring";
 import {FiX} from "react-icons/fi";
+const vibrant = require("node-vibrant");
 interface BlogPostProps {
     children: JSX.Element[] | JSX.Element;
     dateTime: string;
     title: string;
     imageID?: string;
 }
+
 export const BlogPost = ({children, dateTime, title, imageID = "WLUHO9A_xik"}: BlogPostProps) => {
     const [open, setToggle] = useState(false);
+    const [backgroundHex, setBackgroundHex] = useState(colors.gray);
+
+    const fetchColor = () => {
+        const webformatURL = `https://source.unsplash.com/${imageID}`;
+        vibrant.from(webformatURL).getPalette((err: any, palette: any): any => {
+            console.log(palette, err);
+            console.log(palette.Vibrant.hex);
+            setBackgroundHex(palette.Vibrant.hex);
+        });
+    };
+    useEffect(() => {
+        fetchColor();
+    }, []);
+    // const webformatURL = `https://source.unsplash.com/${imageID}`;
+    // let backgroundHex = colors.gray;
+    // vibrant.from(webformatURL).getPalette((err: any, palette: any): any => {
+    //     console.log(palette, err);
+    //     console.log(palette.Vibrant.hex);
+    //     return (backgroundHex = palette.Vibrant.hex);
+    // });
+
     const styles = {
         title: {
             color: colors.highlight,
@@ -40,7 +63,7 @@ export const BlogPost = ({children, dateTime, title, imageID = "WLUHO9A_xik"}: B
     const animation = useSpring({
         width: open ? "900px" : "500px",
         boxShadow: "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)",
-        backgroundColor: colors.gray,
+        backgroundColor: backgroundHex,
         color: colors.highlight,
         display: "flex",
         alignItems: "center",
