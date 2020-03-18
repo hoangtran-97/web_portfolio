@@ -6,9 +6,37 @@ interface BlogPostProps {
     children: JSX.Element[] | JSX.Element;
     dateTime: string;
     title: string;
+    imageID?: string;
 }
-export const BlogPost = ({children, dateTime, title}: BlogPostProps) => {
+export const BlogPost = ({children, dateTime, title, imageID = "WLUHO9A_xik"}: BlogPostProps) => {
     const [open, setToggle] = useState(false);
+    const styles = {
+        title: {
+            color: colors.highlight,
+            margin: 0,
+            backgroundImage: `url(https://source.unsplash.com/${imageID}/300x300)`,
+            backgroundColor: "rgba(68, 62, 62, 0.7)",
+            backgroundBlendMode: "color",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+            width: "300px",
+            height: "300px",
+            borderRadius: "5px",
+            display: "flex",
+            flexDirection: "column" as "column",
+            justifyContent: "center",
+            alignItems: "center"
+        },
+        closeIcon: {
+            margin: "10px",
+            width: 30,
+            height: 30,
+            color: colors.gray,
+            backgroundColor: colors.highlight,
+            borderRadius: "50px"
+        }
+    };
     const animation = useSpring({
         width: open ? "900px" : "500px",
         boxShadow: "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)",
@@ -18,8 +46,6 @@ export const BlogPost = ({children, dateTime, title}: BlogPostProps) => {
         alignItems: "center",
         justifyContent: "flex-start",
         borderRadius: "5px",
-        paddingBottom: open ? "10px" : "0px",
-        marginBottom: "20px",
         config: {
             duration: open ? 300 : 300
         }
@@ -38,17 +64,19 @@ export const BlogPost = ({children, dateTime, title}: BlogPostProps) => {
         color: colors.highlight,
         fontSize: 22,
         fontWeight: "bold",
-        marginLeft: open ? "50px" : "0px",
-        backgroundImage: "url(https://source.unsplash.com/500x500/?linkedin)",
+        // marginLeft: open ? "50px" : "0px",
+        backgroundImage: `url(https://source.unsplash.com/${imageID}/500x500)`,
         backgroundColor: "rgba(68, 62, 62, 0.7)",
         backgroundBlendMode: "color",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
-        width: open ? "250px" : "500px",
-        height: open ? "250px" : "500px",
+        width: open ? "500px" : "500px",
+        height: open ? "600px" : "500px",
         borderRadius: "5px",
+        padding: "10px",
         display: "flex",
+        flexDirection: "column" as "column",
         justifyContent: "center",
         alignItems: "center"
     });
@@ -85,11 +113,10 @@ export const BlogPost = ({children, dateTime, title}: BlogPostProps) => {
                     setToggle(!open);
                 }}
             >
-                <h3 style={styles.title}>
-                    {dateTime}
-                    <br />
-                    {title}
-                </h3>
+                <p style={styles.title}>
+                    <h6> {dateTime}</h6>
+                    <h3>{title}</h3>
+                </p>
                 <animated.div style={mobileChildrenAnimation}>
                     {children}
                     <br />
@@ -112,39 +139,12 @@ export const BlogPost = ({children, dateTime, title}: BlogPostProps) => {
                 }}
             >
                 <animated.div style={titleAnimation}>
-                    {dateTime}
-                    <br />
-                    {title}
+                    <h6> {dateTime}</h6>
+                    <h3>{title}</h3>
                 </animated.div>
                 <animated.div style={childrenAnimation}>{children}</animated.div>
             </animated.div>
         );
     };
     return <>{window.innerWidth > 900 ? <Title></Title> : <MobileTitle></MobileTitle>}</>;
-};
-const styles = {
-    title: {
-        color: colors.highlight,
-        margin: 0,
-        backgroundImage: "url(https://source.unsplash.com/900x400/?linkedin)",
-        backgroundColor: "rgba(68, 62, 62, 0.7)",
-        backgroundBlendMode: "color",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-        width: "300px",
-        height: "300px",
-        borderRadius: "5px",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center"
-    },
-    closeIcon: {
-        margin: "10px",
-        width: 30,
-        height: 30,
-        color: colors.gray,
-        backgroundColor: colors.highlight,
-        borderRadius: "50px"
-    }
 };
