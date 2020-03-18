@@ -31,7 +31,7 @@ export const Navigation = () => {
         backgroundColor: colors.gray,
         zIndex: 9999,
         paddingLeft: "20px",
-        pointerEvents: open ? "auto" : "none",
+        pointerEvents: open ? ("auto" as "auto") : ("none" as "none"),
         config: {
             duration: open ? 300 : 250
         }
