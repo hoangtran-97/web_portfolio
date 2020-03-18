@@ -2,7 +2,7 @@ import React from "react";
 import {withKnobs, text} from "@storybook/addon-knobs";
 
 import {CodeBlock} from "../components/CodeBlock.tsx";
-import {BlogPost} from "../components/BlogPost.tsx";
+import {BlogPost} from "../components/BlogEntries/BlogPost.tsx";
 
 export default {title: "Blog Component", component: CodeBlock, decorators: [withKnobs]};
 export const showCode = () => {
