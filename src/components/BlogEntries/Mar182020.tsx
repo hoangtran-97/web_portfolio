@@ -30,7 +30,7 @@ export const Mar182020 = () => {
                 <li>I have a lot of passion for technology.</li>
                 <li>I have a universal Cover Letter and CV. </li>
             </ul>
-            <p className="blog-entry">"It's a marathon, not a sprint"</p>
+            <p className="blog-entry">Now, where did I messed up?</p>
             <ul>
                 <li>
                     Able to learn and do the job sounds good on paper, but reading this with no proof to back it up
@@ -45,13 +45,13 @@ export const Mar182020 = () => {
                     appreciate the little amount of time you put into them.{" "}
                 </li>
             </ul>
+            <p className="blog-entry">"It's a marathon, not a sprint"</p>
             <p>
                 I am sure that someone already said this before me but I came to this realization about job hunting back
                 in December 2019 and I have been living by it ever since. Now, what do I mean by that? I guess I'll have
                 to leave it for next time, I aim for less than 500 words per entry as I hate lengthy post, and I am sure
                 some would appreciate this too.
             </p>
-            <p>Thank you for reading.</p>
         </BlogPost>
     );
 };

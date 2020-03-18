@@ -13,26 +13,19 @@ interface BlogPostProps {
 export const BlogPost = ({children, dateTime, title, imageID = "WLUHO9A_xik"}: BlogPostProps) => {
     const [open, setToggle] = useState(false);
     const [backgroundHex, setBackgroundHex] = useState(colors.gray);
+    const [fontHex, setFontHex] = useState(colors.highlight);
 
     const fetchColor = () => {
         const webformatURL = `https://source.unsplash.com/${imageID}`;
         vibrant.from(webformatURL).getPalette((err: any, palette: any): any => {
             console.log(palette, err);
-            console.log(palette.Vibrant.hex);
             setBackgroundHex(palette.Vibrant.hex);
+            setFontHex(palette.DarkVibrant.hex);
         });
     };
     useEffect(() => {
         fetchColor();
     }, []);
-    // const webformatURL = `https://source.unsplash.com/${imageID}`;
-    // let backgroundHex = colors.gray;
-    // vibrant.from(webformatURL).getPalette((err: any, palette: any): any => {
-    //     console.log(palette, err);
-    //     console.log(palette.Vibrant.hex);
-    //     return (backgroundHex = palette.Vibrant.hex);
-    // });
-
     const styles = {
         title: {
             color: colors.highlight,
@@ -51,6 +44,9 @@ export const BlogPost = ({children, dateTime, title, imageID = "WLUHO9A_xik"}: B
             justifyContent: "center",
             alignItems: "center"
         },
+        ending: {
+            fontStyle: "italic"
+        },
         closeIcon: {
             margin: "10px",
             width: 30,
@@ -64,7 +60,7 @@ export const BlogPost = ({children, dateTime, title, imageID = "WLUHO9A_xik"}: B
         width: open ? "900px" : "500px",
         boxShadow: "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)",
         backgroundColor: backgroundHex,
-        color: colors.highlight,
+        color: fontHex,
         display: "flex",
         alignItems: "center",
         justifyContent: "flex-start",
@@ -86,7 +82,7 @@ export const BlogPost = ({children, dateTime, title, imageID = "WLUHO9A_xik"}: B
     const titleAnimation = useSpring({
         color: colors.highlight,
         fontSize: 22,
-        fontWeight: "bold",
+        fontWeight: "bold" as "bold",
         backgroundImage: `url(https://source.unsplash.com/${imageID}/500x500)`,
         backgroundColor: "rgba(68, 62, 62, 0.7)",
         backgroundBlendMode: "color",
@@ -106,10 +102,10 @@ export const BlogPost = ({children, dateTime, title, imageID = "WLUHO9A_xik"}: B
         height: open ? "900px" : "300px",
         width: "300px",
         boxShadow: "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)",
-        backgroundColor: colors.gray,
-        color: colors.highlight,
+        backgroundColor: backgroundHex,
+        color: fontHex,
         display: "flex",
-        flexDirection: "column",
+        flexDirection: "column" as "column",
         alignItems: "center",
         justifyContent: "flex-start",
         borderRadius: "5px",
@@ -135,12 +131,13 @@ export const BlogPost = ({children, dateTime, title, imageID = "WLUHO9A_xik"}: B
                     setToggle(!open);
                 }}
             >
-                <p style={styles.title}>
-                    <h6> {dateTime}</h6>
-                    <h3>{title}</h3>
-                </p>
+                <div style={styles.title}>
+                    <h6>{dateTime}</h6>
+                    <h3> {title}</h3>
+                </div>
                 <animated.div style={mobileChildrenAnimation}>
                     {children}
+                    <p style={styles.ending}>Thank you for reading.</p>
                     <br />
                     <FiX
                         onClick={() => {
@@ -161,10 +158,13 @@ export const BlogPost = ({children, dateTime, title, imageID = "WLUHO9A_xik"}: B
                 }}
             >
                 <animated.div style={titleAnimation}>
-                    <h6> {dateTime}</h6>
+                    <h6>{dateTime}</h6>
                     <h3>{title}</h3>
                 </animated.div>
-                <animated.div style={childrenAnimation}>{children}</animated.div>
+                <animated.div style={childrenAnimation}>
+                    {children}
+                    <p style={styles.ending}>Thank you for reading.</p>
+                </animated.div>
             </animated.div>
         );
     };
