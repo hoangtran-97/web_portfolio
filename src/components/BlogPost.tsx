@@ -10,7 +10,7 @@ interface BlogPostProps {
 export const BlogPost = ({children, dateTime, title}: BlogPostProps) => {
     const [open, setToggle] = useState(false);
     const animation = useSpring({
-        width: open ? "900px" : "300px",
+        width: open ? "900px" : "500px",
         boxShadow: "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)",
         backgroundColor: colors.gray,
         color: colors.highlight,
@@ -19,13 +19,14 @@ export const BlogPost = ({children, dateTime, title}: BlogPostProps) => {
         justifyContent: "flex-start",
         borderRadius: "5px",
         paddingBottom: open ? "10px" : "0px",
+        marginBottom: "20px",
         config: {
             duration: open ? 300 : 300
         }
     });
     const childrenAnimation = useSpring({
         width: open ? "600px" : "0px",
-        height: "300px",
+        height: "500px",
         padding: open ? "50px" : "0px",
         overflow: "scroll",
         opacity: open ? 1 : 0,
@@ -38,14 +39,14 @@ export const BlogPost = ({children, dateTime, title}: BlogPostProps) => {
         fontSize: 22,
         fontWeight: "bold",
         marginLeft: open ? "50px" : "0px",
-        backgroundImage: "url(https://source.unsplash.com/900x400/?linkedin)",
+        backgroundImage: "url(https://source.unsplash.com/500x500/?linkedin)",
         backgroundColor: "rgba(68, 62, 62, 0.7)",
         backgroundBlendMode: "color",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
-        width: open ? "200px" : "300px",
-        height: open ? "200px" : "300px",
+        width: open ? "250px" : "500px",
+        height: open ? "250px" : "500px",
         borderRadius: "5px",
         display: "flex",
         justifyContent: "center",
@@ -62,6 +63,7 @@ export const BlogPost = ({children, dateTime, title}: BlogPostProps) => {
         alignItems: "center",
         justifyContent: "flex-start",
         borderRadius: "5px",
+        marginBottom: "20px",
         config: {
             duration: open ? 300 : 300
         }
