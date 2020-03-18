@@ -64,7 +64,6 @@ export const BlogPost = ({children, dateTime, title, imageID = "WLUHO9A_xik"}: B
         color: colors.highlight,
         fontSize: 22,
         fontWeight: "bold",
-        // marginLeft: open ? "50px" : "0px",
         backgroundImage: `url(https://source.unsplash.com/${imageID}/500x500)`,
         backgroundColor: "rgba(68, 62, 62, 0.7)",
         backgroundBlendMode: "color",
