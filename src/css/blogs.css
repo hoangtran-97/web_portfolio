@@ -1,0 +1,14 @@
+.blog-entry {
+    font-weight: bold;
+}
+.blogs-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.01rem;
+    line-height: 1.8;
+}
+.blog {
+    grid-area: blg;
+}
