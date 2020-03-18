@@ -27,23 +27,6 @@ export const BlogPost = ({children, dateTime, title, imageID = "WLUHO9A_xik"}: B
         fetchColor();
     }, []);
     const styles = {
-        title: {
-            color: colors.highlight,
-            margin: 0,
-            backgroundImage: `url(https://source.unsplash.com/${imageID}/300x300)`,
-            backgroundColor: "rgba(68, 62, 62, 0.7)",
-            backgroundBlendMode: "color",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-            width: "300px",
-            height: "300px",
-            borderRadius: "5px",
-            display: "flex",
-            flexDirection: "column" as "column",
-            justifyContent: "center",
-            alignItems: "center"
-        },
         ending: {
             fontStyle: "italic"
         },
@@ -51,8 +34,8 @@ export const BlogPost = ({children, dateTime, title, imageID = "WLUHO9A_xik"}: B
             margin: "10px",
             width: 30,
             height: 30,
-            color: colors.gray,
-            backgroundColor: colors.highlight,
+            color: backgroundHex,
+            backgroundColor: fontHex,
             borderRadius: "50px"
         }
     };
@@ -92,6 +75,8 @@ export const BlogPost = ({children, dateTime, title, imageID = "WLUHO9A_xik"}: B
         width: open ? "500px" : "500px",
         height: open ? "600px" : "500px",
         borderRadius: "5px",
+        borderTopRightRadius: open ? "0px" : "5px",
+        borderBottomRightRadius: open ? "0px" : "5px",
         padding: "10px",
         display: "flex",
         flexDirection: "column" as "column",
@@ -123,6 +108,25 @@ export const BlogPost = ({children, dateTime, title, imageID = "WLUHO9A_xik"}: B
             duration: open ? 400 : 200
         }
     });
+    const mobileTitleAnimation = useSpring({
+        color: colors.highlight,
+        margin: 0,
+        backgroundImage: `url(https://source.unsplash.com/${imageID}/300x300)`,
+        backgroundColor: "rgba(68, 62, 62, 0.7)",
+        backgroundBlendMode: "color",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        width: "300px",
+        height: "300px",
+        borderRadius: "5px",
+        borderBottomLeftRadius: open ? "0px" : "5px",
+        borderBottomRightRadius: open ? "0px" : "5px",
+        display: "flex",
+        flexDirection: "column" as "column",
+        justifyContent: "center",
+        alignItems: "center"
+    });
     const MobileTitle = () => {
         return (
             <animated.div
@@ -131,10 +135,10 @@ export const BlogPost = ({children, dateTime, title, imageID = "WLUHO9A_xik"}: B
                     setToggle(!open);
                 }}
             >
-                <div style={styles.title}>
+                <animated.div style={mobileTitleAnimation}>
                     <h6>{dateTime}</h6>
                     <h3> {title}</h3>
-                </div>
+                </animated.div>
                 <animated.div style={mobileChildrenAnimation}>
                     {children}
                     <p style={styles.ending}>Thank you for reading.</p>
