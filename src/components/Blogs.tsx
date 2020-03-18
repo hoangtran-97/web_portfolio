@@ -2,6 +2,8 @@ import React from "react";
 import colors from "../constants/colors";
 import {Link} from "react-router-dom";
 import {FiArrowLeft} from "react-icons/fi";
+import {Mar182020} from "./BlogEntries/Mar182020";
+
 export const Blogs = () => {
     return (
         <>
@@ -9,7 +11,10 @@ export const Blogs = () => {
                 <FiArrowLeft style={styles.icon}></FiArrowLeft> Back
             </Link>
             <h2 style={styles.header}>Blog Entries</h2>
-            <p style={styles.header}>Content Comming Soon!</p>
+            <p style={styles.banner}>My journey, my findings, my interests.</p>
+            <div className="blogs-list">
+                <Mar182020></Mar182020>
+            </div>
         </>
     );
 };
@@ -27,5 +32,10 @@ const styles = {
     icon: {
         width: 20,
         height: 20
+    },
+    banner: {
+        fontStyle: "italic",
+        textAlign: "center" as "center",
+        color: colors.highlight
     }
 };

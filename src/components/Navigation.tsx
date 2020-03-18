@@ -4,13 +4,6 @@ import {FiMenu, FiX} from "react-icons/fi";
 import {NavigationPaths} from "./NavigationPaths";
 import {animated, useSpring} from "react-spring";
 
-const Menu = () => {
-    return (
-        <div style={styles.menuContainer}>
-            <NavigationPaths></NavigationPaths>
-        </div>
-    );
-};
 export const Navigation = () => {
     const [open, setToggle] = useState(false);
     const animation = useSpring({
@@ -61,6 +54,13 @@ export const Navigation = () => {
                     style={styles.hamburgerCloseIcon}
                 ></FiX>
             </animated.div>
+        );
+    };
+    const Menu = () => {
+        return (
+            <div style={styles.menuContainer}>
+                <NavigationPaths></NavigationPaths>
+            </div>
         );
     };
     return <>{window.innerWidth > 900 ? <Menu></Menu> : <MobileMenuIcon></MobileMenuIcon>}</>;

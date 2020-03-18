@@ -17,6 +17,6 @@ export const CodeBlock = ({children, language}: CodeBlockProps) => {
 };
 const styles = {
     container: {
-        width: "100px"
+        width: "300px"
     }
 };
