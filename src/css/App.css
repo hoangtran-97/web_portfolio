@@ -18,6 +18,7 @@ body {
         "nav"
         "cnt"
         "skl"
+        "key"
         "exp"
         "blg";
     grid-template-columns: 1fr;
@@ -34,7 +35,15 @@ body {
 .skills {
     grid-area: skl;
 }
-
+.key {
+    grid-area: key;
+}
+.key-item {
+    width: 25px;
+    height: 25px;
+    margin-right: 20px;
+    border-radius: 50px;
+}
 .experiences {
     grid-area: exp;
     display: grid;
@@ -54,10 +63,11 @@ body {
             "hdr hdr hdr hdr hdr hdr"
             "cnt cnt cnt cnt cnt nav"
             "skl skl skl skl skl nav"
+            "key key key key key nav"
             "exp exp exp exp exp nav"
             "blg blg blg blg blg nav";
         grid-template-columns: repeat(6, 1fr);
-        grid-template-rows: 100px 300px 200px 1fr;
+        grid-template-rows: 100px 300px 200px 150px 1fr;
     }
     .experiences {
         grid-area: exp;

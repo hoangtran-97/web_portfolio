@@ -1,17 +1,13 @@
 import React from "react";
 import {Experience} from "./Experience";
+import colors from "../constants/colors";
 enum projectTypes {
     gmo = "GMO-Z RUNSYSTEM - React Native Developer",
     personal = "Personal project",
     wip = "Personal project, work-in-progress",
     offline = "Personal project, planned to deploy live version"
 }
-enum colorCode {
-    professional = "#65B7ED",
-    personal = "#8EED4D",
-    offline = "#D4D4C5",
-    wip = "#D4D31A"
-}
+
 export const Experiences = () => {
     return (
         <>
@@ -20,7 +16,7 @@ export const Experiences = () => {
                 startDate="Jul. 2019"
                 endDate="Oct. 2019"
                 projectType={projectTypes.gmo}
-                colorCode={colorCode.professional}
+                colorCode={colors.professional}
             >
                 <p>React Native application for Kangaroo client.</p>
                 <ul>
@@ -41,7 +37,7 @@ export const Experiences = () => {
                 startDate="Apr. 2019"
                 endDate="Jun. 2019"
                 projectType={projectTypes.gmo}
-                colorCode={colorCode.professional}
+                colorCode={colors.professional}
             >
                 <p>React Native application for JACCS client.</p>
                 <ul>
@@ -58,7 +54,7 @@ export const Experiences = () => {
                 title="Yakult"
                 startDate="Jun. 2019"
                 projectType={projectTypes.gmo}
-                colorCode={colorCode.professional}
+                colorCode={colors.professional}
             >
                 <p>React Native application for Yakult client.</p>
                 <ul>
@@ -75,7 +71,7 @@ export const Experiences = () => {
                 startDate="Feb. 2020"
                 hasGit
                 projectType={projectTypes.personal}
-                colorCode={colorCode.personal}
+                colorCode={colors.personal}
                 gitLink="https://github.com/hoangtran-97/web_portfolio"
             >
                 <p>Website - this site</p>
@@ -93,7 +89,7 @@ export const Experiences = () => {
                 hasDemo
                 hasGit
                 projectType={projectTypes.personal}
-                colorCode={colorCode.personal}
+                colorCode={colors.personal}
                 gitLink="https://github.com/hoangtran-97/web_weatherJournal"
                 demoLink="https://hoangtranxamk-weather-journal.herokuapp.com/"
             >
@@ -108,7 +104,7 @@ export const Experiences = () => {
                 title="Moments"
                 startDate="Jul. 2019"
                 projectType={projectTypes.personal}
-                colorCode={colorCode.offline}
+                colorCode={colors.offline}
                 hasGit
                 gitLink="https://github.com/hoangtran-97/RN_Moments"
             >
@@ -125,7 +121,7 @@ export const Experiences = () => {
                 hasDemo
                 hasGit
                 projectType={projectTypes.personal}
-                colorCode={colorCode.personal}
+                colorCode={colors.personal}
                 gitLink="https://github.com/hoangtran-97/web_travelPlanner"
                 demoLink="https://hoangtranxamk-travel-planner.herokuapp.com/"
             >
@@ -143,7 +139,7 @@ export const Experiences = () => {
                 hasDemo
                 hasGit
                 projectType={projectTypes.personal}
-                colorCode={colorCode.personal}
+                colorCode={colors.personal}
                 gitLink="https://github.com/hoangtran-97/web_landingPage"
                 demoLink="https://hoangtranxamk-landing-page.netlify.com/"
             >
@@ -161,7 +157,7 @@ export const Experiences = () => {
                 hasDemo
                 hasGit
                 projectType={projectTypes.personal}
-                colorCode={colorCode.personal}
+                colorCode={colors.personal}
                 gitLink="https://github.com/hoangtran-97/web_blog_html_css"
                 demoLink="https://hoangtranxamk-blog-html-css.netlify.com"
             >
@@ -178,7 +174,7 @@ export const Experiences = () => {
                 startDate="Dec. 2019"
                 hasGit
                 projectType={projectTypes.personal}
-                colorCode={colorCode.offline}
+                colorCode={colors.offline}
                 gitLink="https://github.com/hoangtran-97/web_JobBoard"
             >
                 <p>Website</p>
@@ -194,7 +190,7 @@ export const Experiences = () => {
                 hasGit
                 hasDemo
                 projectType={projectTypes.personal}
-                colorCode={colorCode.personal}
+                colorCode={colors.personal}
                 gitLink="https://github.com/hoangtran-97/web_passwordGenerator"
                 demoLink="https://hoangtranxamk-passwordgenerator.netlify.com/"
             >
@@ -211,7 +207,7 @@ export const Experiences = () => {
                 hasGit
                 hasDemo
                 projectType={projectTypes.personal}
-                colorCode={colorCode.personal}
+                colorCode={colors.personal}
                 gitLink="https://github.com/hoangtran-97/web_piano"
                 demoLink="https://hoangtranxamk-piano.netlify.com/"
             >
@@ -226,7 +222,7 @@ export const Experiences = () => {
                 startDate="Feb. 2020"
                 hasGit
                 projectType={projectTypes.wip}
-                colorCode={colorCode.wip}
+                colorCode={colors.wip}
                 gitLink="https://github.com/hoangtran-97/web_expenseTracker"
             >
                 <p>Website</p>

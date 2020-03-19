@@ -9,7 +9,10 @@ const color = {
     black: "#000000",
     plantinum: "#E9E9E9",
     nyanza: "#E8F5D1",
-    arsenic: "#424242"
+    arsenic: "#424242",
+    mediumSpringBud: "#65B7ED",
+    pastelGray: "#D4D4C5",
+    citrine: "#D4D31A"
 };
 export default {
     sub: color.turtleGreen,
@@ -17,5 +20,9 @@ export default {
     background: color.plantinum,
     text: color.black,
     highlight: color.white,
-    gray: color.arsenic
+    gray: color.arsenic,
+    professional: color.mediumSpringBud,
+    personal: color.kiwiGreen,
+    offline: color.pastelGray,
+    wip: color.citrine
 };
