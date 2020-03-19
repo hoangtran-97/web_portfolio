@@ -11,6 +11,7 @@ interface ExperienceProps {
     startDate: string;
     endDate?: string;
     projectType: string;
+    colorCode?: string;
     children: JSX.Element[] | JSX.Element;
 }
 export const Experience = ({
@@ -22,11 +23,52 @@ export const Experience = ({
     startDate,
     endDate,
     projectType,
+    colorCode,
     children
 }: ExperienceProps) => {
+    const styles = {
+        container: {
+            display: "flex",
+            flexDirection: "column" as "column",
+            justifyContent: "flex-start",
+            backgroundColor: colors.gray,
+            borderRadius: "5px",
+            padding: "20px",
+            boxShadow: "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)",
+            color: "#D4D4C5",
+            fontSize: 14,
+            borderTop: colorCode ? `6px solid ${colorCode}` : `6px solid #D4D4C5`
+        },
+        button: {
+            height: "40px",
+            color: colors.text,
+            fontSize: 14,
+            backgroundColor: "hsla(0, 0%, 100%, 0.76)",
+            padding: "10px",
+            borderRadius: "5px",
+            marginRight: "10px",
+            marginBottom: "10px",
+            boxShadow: "0 4px 6px 0 hsla(0,0%,0%,0.2)"
+        },
+        icon: {
+            width: 10,
+            height: 10,
+            color: colors.text
+        },
+        buttonContainer: {
+            display: "flex",
+            flexDirection: "row" as "row",
+            flex: 1,
+            alignItems: "flex-end"
+        },
+        header: {
+            color: colors.highlight,
+            marginBottom: "30px"
+        }
+    };
     return (
         <div style={styles.container} className="card">
-            <h2>
+            <h2 style={styles.header}>
                 {title}: {startDate} {endDate ? "-" : null} {endDate}
             </h2>
             <h5>{projectType}</h5>
@@ -55,39 +97,4 @@ export const Experience = ({
             </div>
         </div>
     );
-};
-const styles = {
-    container: {
-        display: "flex",
-        flexDirection: "column" as "column",
-        justifyContent: "flex-start",
-        backgroundColor: colors.gray,
-        borderRadius: "5px",
-        padding: "10px",
-        boxShadow: "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)",
-        color: colors.highlight,
-        fontSize: 14
-    },
-    button: {
-        height: "40px",
-        color: colors.text,
-        fontSize: 14,
-        backgroundColor: colors.highlight,
-        padding: "10px",
-        borderRadius: "5px",
-        marginRight: "10px",
-        marginBottom: "10px",
-        boxShadow: "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)"
-    },
-    icon: {
-        width: 10,
-        height: 10,
-        color: colors.text
-    },
-    buttonContainer: {
-        display: "flex",
-        flexDirection: "row" as "row",
-        flex: 1,
-        alignItems: "flex-end"
-    }
 };
