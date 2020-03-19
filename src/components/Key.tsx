@@ -31,7 +31,9 @@ const styles = {
         flexDirection: "column" as "column",
         justifyContent: "center",
         alignItems: "flex-start",
-        width: "300px"
+        width: "300px",
+        height: "200px",
+        fontSize: "14px"
     },
     keyProfessional: {
         backgroundColor: colors.professional
