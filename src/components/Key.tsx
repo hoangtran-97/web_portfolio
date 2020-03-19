@@ -38,9 +38,16 @@ const styles = {
     keyProfessional: {
         backgroundColor: colors.professional
     },
-    keyPersonal: {backgroundColor: colors.personal},
-    keyOffline: {backgroundColor: colors.offline},
-    keyWip: {backgroundColor: colors.wip},
+    keyPersonal: {
+        backgroundColor: colors.personal
+    },
+    keyOffline: {
+        backgroundColor: colors.offline
+    },
+    keyWip: {
+        backgroundColor: colors.wip
+        // boxShadow: "0 0 10px #9ecaed"
+    },
     key: {},
     keyContainer: {
         display: "flex",
