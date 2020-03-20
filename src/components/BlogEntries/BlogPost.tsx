@@ -23,9 +23,11 @@ export const BlogPost = ({children, dateTime, title, imageID = "WLUHO9A_xik"}: B
             setFontHex(palette.DarkVibrant.hex);
         });
     };
+    /*eslint-disable */
     useEffect(() => {
         fetchColor();
     }, []);
+    /*eslint-enable */
     const styles = {
         ending: {
             fontStyle: "italic"
@@ -161,7 +163,7 @@ export const BlogPost = ({children, dateTime, title, imageID = "WLUHO9A_xik"}: B
                     setToggle(!open);
                 }}
             >
-                <animated.div style={titleAnimation}>
+                <animated.div style={titleAnimation} className="blog-item">
                     <h6>{dateTime}</h6>
                     <h3>{title}</h3>
                 </animated.div>
