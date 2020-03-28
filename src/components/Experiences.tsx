@@ -248,6 +248,25 @@ export const Experiences = () => {
                 </ul>
                 <p>Technologies: JavaScript, Express, Jest, Service worker</p>
             </Experience>
+            <Experience
+                title="Firebase Image Gallery"
+                startDate="Mar. 2020"
+                endDate="Mar. 2020"
+                hasGit
+                hasDemo
+                projectType={projectTypes.personal}
+                colorCode={colors.personal}
+                gitLink="https://github.com/hoangtran-97/web_imageGallery"
+                demoLink="https://fir-gallery-9c70e.firebaseapp.com/"
+            >
+                <p>Website</p>
+                <ul>
+                    <li>Online Gallery with Dynamic theming using Firebase Storage</li>
+                    <li>Dynamic themeing based on selected image.</li>
+                    <li>Upload/Download Images from Firebase Storage.</li>
+                </ul>
+                <p>Technologies: React, CSS, Firebase</p>
+            </Experience>
         </>
     );
 };
