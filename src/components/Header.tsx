@@ -10,7 +10,6 @@ export const Header = () => {
 };
 const styles = {
     header: {
-        // backgroundColor: colors.gray,
         color: colors.highlight,
         width: "100%",
         padding: "10px",

@@ -69,12 +69,12 @@ export const Experience = ({
     return (
         <div style={styles.container} className="card">
             <h2 style={styles.header}>
-                {title}: {startDate} {endDate ? "-" : null} {endDate}
+                {title}: {startDate} {endDate && "-"} {endDate}
             </h2>
             <h5>{projectType}</h5>
             {children}
             <div style={styles.buttonContainer} className="button-container">
-                {hasGit ? (
+                {hasGit && (
                     <button
                         style={styles.button}
                         type="button"
@@ -83,8 +83,8 @@ export const Experience = ({
                     >
                         GitHub <FiGithub style={styles.icon}></FiGithub>
                     </button>
-                ) : null}
-                {hasDemo ? (
+                )}
+                {hasDemo && (
                     <button
                         style={styles.button}
                         type="button"
@@ -93,7 +93,7 @@ export const Experience = ({
                     >
                         Live Demo <FiZap style={styles.icon}></FiZap>
                     </button>
-                ) : null}
+                )}
             </div>
         </div>
     );
