@@ -3,6 +3,7 @@ import colors from "../constants/colors";
 import {Link} from "react-router-dom";
 import {FiArrowLeft} from "react-icons/fi";
 import {Mar182020} from "./BlogEntries/Mar182020";
+import {Apr242020} from "./BlogEntries/Apr242020";
 
 export const Blogs = () => {
     return (
@@ -14,6 +15,7 @@ export const Blogs = () => {
             <p style={styles.banner}>My journey, my findings, my interests.</p>
             <div className="blogs-list">
                 <Mar182020></Mar182020>
+                <Apr242020></Apr242020>
             </div>
         </>
     );

@@ -52,7 +52,8 @@ export const BlogPost = ({children, dateTime, title, imageID = "WLUHO9A_xik"}: B
         borderRadius: "5px",
         config: {
             duration: open ? 300 : 300
-        }
+        },
+        marginBottom: "20px"
     });
     const childrenAnimation = useSpring({
         width: open ? "600px" : "0px",
