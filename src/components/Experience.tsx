@@ -14,18 +14,7 @@ interface ExperienceProps {
     colorCode?: string;
     children: JSX.Element[] | JSX.Element;
 }
-export const Experience = ({
-    title,
-    hasGit,
-    hasDemo,
-    gitLink,
-    demoLink,
-    startDate,
-    endDate,
-    projectType,
-    colorCode,
-    children
-}: ExperienceProps) => {
+export const Experience = ({title, hasGit, hasDemo, gitLink, demoLink, startDate, endDate, projectType, colorCode, children}: ExperienceProps) => {
     const styles = {
         container: {
             display: "flex",
@@ -75,22 +64,12 @@ export const Experience = ({
             {children}
             <div style={styles.buttonContainer} className="button-container">
                 {hasGit && (
-                    <button
-                        style={styles.button}
-                        type="button"
-                        onClick={() => window.open(gitLink, "_blank")}
-                        className="hvr-underline-from-center"
-                    >
+                    <button style={styles.button} type="button" onClick={() => window.open(gitLink, "_blank")} className="hvr-underline-from-center">
                         GitHub <FiGithub style={styles.icon}></FiGithub>
                     </button>
                 )}
                 {hasDemo && (
-                    <button
-                        style={styles.button}
-                        type="button"
-                        onClick={() => window.open(demoLink, "_blank")}
-                        className="hvr-underline-from-center"
-                    >
+                    <button style={styles.button} type="button" onClick={() => window.open(demoLink, "_blank")} className="hvr-underline-from-center">
                         Live Demo <FiZap style={styles.icon}></FiZap>
                     </button>
                 )}

@@ -46,9 +46,7 @@ const styles = {
     },
     keyWip: {
         backgroundColor: colors.wip
-        // boxShadow: "0 0 10px #9ecaed"
     },
-    key: {},
     keyContainer: {
         display: "flex",
         flexDirection: "row" as "row",
