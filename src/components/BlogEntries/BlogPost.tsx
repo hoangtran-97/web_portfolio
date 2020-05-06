@@ -18,7 +18,7 @@ export const BlogPost = ({children, dateTime, title, imageID = "WLUHO9A_xik"}: B
     const fetchColor = () => {
         const webformatURL = `https://source.unsplash.com/${imageID}`;
         vibrant.from(webformatURL).getPalette((err: any, palette: any): any => {
-            console.log(palette, err);
+            console.log("err", err);
             setBackgroundHex(palette.Vibrant.hex);
             setFontHex(palette.DarkVibrant.hex);
         });
