@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import colors from "../../constants/colors";
+import colors from "../../../constants/colors";
 import {animated, useSpring} from "react-spring";
 import {FiX} from "react-icons/fi";
 const vibrant = require("node-vibrant");

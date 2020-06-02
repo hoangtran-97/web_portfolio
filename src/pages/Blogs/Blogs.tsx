@@ -1,10 +1,11 @@
 import React from "react";
-import colors from "../constants/colors";
+import colors from "../../constants/colors";
 import {Link} from "react-router-dom";
 import {FiArrowLeft} from "react-icons/fi";
 import {Mar182020} from "./BlogEntries/Mar182020";
 import {Apr242020} from "./BlogEntries/Apr242020";
-import "../css/blogs.css";
+import "./style.css";
+
 export const Blogs = () => {
     return (
         <>
