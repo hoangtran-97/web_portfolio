@@ -1,15 +1,15 @@
 import React from "react";
-import "./css/App.css";
+import "./style.css";
 import {Switch, Route, BrowserRouter as Router} from "react-router-dom";
-import {Header} from "./components/Header/Header";
-import {Contacts} from "./components/Contacts/Contacts";
-import {Experiences} from "./components/Experiences/Experiences";
-import {Skills} from "./components/Skills/Skills";
-import {Navigation} from "./components/Navigation/Navigation";
-import {Blogs} from "./pages/Blogs/Blogs";
-import {Key} from "./components/Key/Key";
+import {Header} from "../../components/Header/Header";
+import {Contacts} from "../../components/Contacts/Contacts";
+import {Experiences} from "../../components/Experiences/Experiences";
+import {Skills} from "../../components/Skills/Skills";
+import {Navigation} from "../../components/Navigation/Navigation";
+import {Blogs} from "../Blogs/Blogs";
+import {Key} from "../../components/Key/Key";
 
-function App() {
+function Landing() {
     return (
         <>
             <Router>
@@ -45,4 +45,4 @@ function App() {
     );
 }
 
-export default App;
+export default Landing;
