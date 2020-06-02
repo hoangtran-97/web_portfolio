@@ -17,3 +17,13 @@
     background-position: center;
     background-repeat: no-repeat;
 }
+.skill_container {
+    color: white;
+    font-weight: 700;
+    font-size: 18px;
+}
+.skills_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
