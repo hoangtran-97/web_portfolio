@@ -1,7 +1,8 @@
 import React from "react";
-import colors from "../constants/colors";
 import {HashLink} from "react-router-hash-link";
 import {Link} from "react-router-dom";
+import colors from "../../constants/colors";
+
 export const NavigationPaths = () => {
     return (
         <>

@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import colors from "../constants/colors";
+import colors from "../../constants/colors";
 import {FiMenu, FiX} from "react-icons/fi";
 import {NavigationPaths} from "./NavigationPaths";
 import {animated, useSpring} from "react-spring";

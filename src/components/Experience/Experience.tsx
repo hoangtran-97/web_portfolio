@@ -1,5 +1,5 @@
 import React from "react";
-import colors from "../constants/colors";
+import colors from "../../constants/colors";
 import {FiZap, FiGithub} from "react-icons/fi";
 
 interface ExperienceProps {

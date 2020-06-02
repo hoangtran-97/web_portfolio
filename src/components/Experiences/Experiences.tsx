@@ -1,6 +1,6 @@
 import React from "react";
-import {Experience} from "./Experience";
-import colors from "../constants/colors";
+import {Experience} from "../Experience/Experience";
+import colors from "../../constants/colors";
 enum projectTypes {
     gmo = "GMO-Z RUNSYSTEM - React Native Developer",
     personal = "Personal project",
@@ -11,57 +11,29 @@ enum projectTypes {
 export const Experiences = () => {
     return (
         <>
-            <Experience
-                title="DMS"
-                startDate="Jul. 2019"
-                endDate="Oct. 2019"
-                projectType={projectTypes.gmo}
-                colorCode={colors.professional}
-            >
+            <Experience title="DMS" startDate="Jul. 2019" endDate="Oct. 2019" projectType={projectTypes.gmo} colorCode={colors.professional}>
                 <p>React Native application for Kangaroo client.</p>
                 <ul>
-                    <li>
-                        Worked as a solo developer to create React Native application and communicate with back-end team
-                        to implements APIs.
-                    </li>
+                    <li>Worked as a solo developer to create React Native application and communicate with back-end team to implements APIs.</li>
                     <li>Communicated with the client directly, prototyped, design and programmed the product.</li>
-                    <li>
-                        Learnt React and React Native ecosystem, along with agile and continuous delivery software
-                        development methodology.
-                    </li>
+                    <li>Learnt React and React Native ecosystem, along with agile and continuous delivery software development methodology.</li>
                 </ul>
                 <p>Technologies: React Native, Redux, Realm, Google Map, REST API</p>
             </Experience>
-            <Experience
-                title="JACCS"
-                startDate="Apr. 2019"
-                endDate="Jun. 2019"
-                projectType={projectTypes.gmo}
-                colorCode={colors.professional}
-            >
+            <Experience title="JACCS" startDate="Apr. 2019" endDate="Jun. 2019" projectType={projectTypes.gmo} colorCode={colors.professional}>
                 <p>React Native application for JACCS client.</p>
                 <ul>
                     <li>Worked in a team of 5 developers. Deliver the product in 3 weeks.</li>
-                    <li>
-                        Implement features such as receiving notifications, loading screen, loading animations, querry
-                        sorting.
-                    </li>
+                    <li>Implement features such as receiving notifications, loading screen, loading animations, querry sorting.</li>
                     <li>Contributed to features suggestion and bug fixing.</li>
                 </ul>
                 <p>Technologies: React Native, Redux, Realm, Google Map, REST API</p>
             </Experience>
-            <Experience
-                title="Yakult"
-                startDate="Jun. 2019"
-                projectType={projectTypes.gmo}
-                colorCode={colors.professional}
-            >
+            <Experience title="Yakult" startDate="Jun. 2019" projectType={projectTypes.gmo} colorCode={colors.professional}>
                 <p>React Native application for Yakult client.</p>
                 <ul>
                     <li>Worked in a team of 5 developers. Deliver the product in 3 weeks.</li>
-                    <li>
-                        Implement features such as receiving notifications, loading screen, animations, map tracking.
-                    </li>
+                    <li>Implement features such as receiving notifications, loading screen, animations, map tracking.</li>
                     <li>Contributed to features suggestion and bug fixing.</li>
                 </ul>
                 <p>Technologies: React Native, Redux, Realm, Google Map, REST API</p>

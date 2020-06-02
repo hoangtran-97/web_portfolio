@@ -1,46 +1,22 @@
 import React from "react";
 import {FiMail, FiGithub, FiFacebook, FiLinkedin, FiPhoneCall} from "react-icons/fi";
-import colors from "../constants/colors";
+import colors from "../../constants/colors";
 export const Contacts = () => {
     return (
         <div style={styles.container}>
-            <a
-                className="contact-link"
-                href="mailto:hoangtranxamk@gmail.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={styles.anchor}
-            >
+            <a className="contact-link" href="mailto:hoangtranxamk@gmail.com" target="_blank" rel="noopener noreferrer" style={styles.anchor}>
                 <FiMail style={styles.icon} />
                 hoangtranxamk@gmail.com
             </a>
-            <a
-                className="contact-link"
-                href="https://github.com/hoangtran-97"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={styles.anchor}
-            >
+            <a className="contact-link" href="https://github.com/hoangtran-97" target="_blank" rel="noopener noreferrer" style={styles.anchor}>
                 <FiGithub style={styles.icon} />
                 GitHub
             </a>
-            <a
-                className="contact-link"
-                href="https://www.facebook.com/vuHoangTran97"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={styles.anchor}
-            >
+            <a className="contact-link" href="https://www.facebook.com/vuHoangTran97" target="_blank" rel="noopener noreferrer" style={styles.anchor}>
                 <FiFacebook style={styles.icon} />
                 Facebook
             </a>
-            <a
-                className="contact-link"
-                href="https://www.linkedin.com/in/hoangtranxamk/"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={styles.anchor}
-            >
+            <a className="contact-link" href="https://www.linkedin.com/in/hoangtranxamk/" target="_blank" rel="noopener noreferrer" style={styles.anchor}>
                 <FiLinkedin style={styles.icon} />
                 LinkedIn
             </a>
