@@ -19,24 +19,24 @@ function Landing() {
                     </Route>
                     <Route path="/">
                         <div className="container">
-                            <div className="header">
+                            <section className="header">
                                 <Header />
-                            </div>
-                            <div className="contacts" id="nav-contacts">
+                            </section>
+                            <section className="contacts" id="nav-contacts">
                                 <Contacts />
-                            </div>
-                            <div className="skills" id="nav-skills">
+                            </section>
+                            <section className="skills" id="nav-skills">
                                 <Skills />
-                            </div>
-                            <div className="navigation">
+                            </section>
+                            <section className="navigation">
                                 <Navigation />>
-                            </div>
-                            <div className="key">
+                            </section>
+                            <section className="key">
                                 <Key />
-                            </div>
-                            <div className="experiences" id="nav-experiences">
+                            </section>
+                            <section className="experiences" id="nav-experiences">
                                 <Experiences />
-                            </div>
+                            </section>
                         </div>
                     </Route>
                 </Switch>

@@ -10,7 +10,7 @@ const Skill = ({skill}: SkillProps) => <div className="skill_container">{skill}<
 export const Skills = () => {
     return (
         <div className="skills_container">
-            //I Know this is an anti-pattern but in this case since the data is static it is safe
+            {/* I Know this is an anti-pattern but in this case since the data is static it is safe */}
             {skills.map((skill, index) => (
                 <Skill skill={skill} key={index} />
             ))}

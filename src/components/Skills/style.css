@@ -21,9 +21,18 @@
     color: white;
     font-weight: 700;
     font-size: 18px;
-}
-.skills_container {
+    background-color: var(--arsenic);
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 50px;
+    border-radius: 20px;
+}
+.skills_container {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(auto-fill, 200px);
+    justify-content: center;
+    align-items: center;
+    grid-auto-rows: 50px;
 }
