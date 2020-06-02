@@ -20,7 +20,7 @@
 .skill_container {
     color: white;
     font-weight: 700;
-    font-size: 18px;
+    font-size: 14px;
     background-color: var(--arsenic);
     display: flex;
     justify-content: center;
@@ -31,8 +31,26 @@
 .skills_container {
     display: grid;
     gap: 15px;
-    grid-template-columns: repeat(auto-fill, 200px);
+    grid-template-columns: repeat(2, 150px);
     justify-content: center;
     align-items: center;
     grid-auto-rows: 50px;
+}
+@media (min-width: 900px) {
+    .skill_container {
+        color: white;
+        font-weight: 700;
+        font-size: 18px;
+        background-color: var(--arsenic);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        border-radius: 20px;
+    }
+    .skills_container {
+        display: grid;
+        gap: 15px;
+        grid-template-columns: repeat(auto-fill, 200px);
+    }
 }
