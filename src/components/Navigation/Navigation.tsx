@@ -26,8 +26,8 @@ export const Navigation = () => {
         paddingLeft: "20px",
         pointerEvents: open ? ("auto" as "auto") : ("none" as "none"),
         config: {
-            duration: open ? 300 : 250
-        }
+            duration: open ? 300 : 250,
+        },
     });
 
     const MobileMenuIcon = () => {
@@ -76,7 +76,7 @@ const styles = {
         alignItems: "center",
         borderRadius: "5px",
         boxShadow: "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)",
-        height: "100%"
+        height: "100%",
     },
     mobileMenuContainer: {
         fontSize: 20,
@@ -94,7 +94,7 @@ const styles = {
         width: "70vw",
         backgroundColor: colors.gray,
         zIndex: 9999,
-        paddingLeft: "20px"
+        paddingLeft: "20px",
     },
     hamburgerIcon: {
         color: colors.highlight,
@@ -103,12 +103,12 @@ const styles = {
         position: "fixed" as "fixed",
         top: "20px",
         left: "10px",
-        zIndex: 9999
+        zIndex: 9999,
     },
     hamburgerCloseIcon: {
         color: colors.highlight,
         height: 25,
         width: 25,
-        zIndex: 9999
-    }
+        zIndex: 9999,
+    },
 };
