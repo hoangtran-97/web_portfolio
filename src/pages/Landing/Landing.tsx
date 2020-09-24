@@ -6,7 +6,7 @@ import {Contacts} from "../../components/Contacts/Contacts";
 import {Experiences} from "../../components/Experiences/Experiences";
 import {Skills} from "../../components/Skills/Skills";
 import {Navigation} from "../../components/Navigation/Navigation";
-import {Blogs} from "../Blogs/Blogs";
+// import {Blogs} from "../Blogs/Blogs";
 import {Key} from "../../components/Key/Key";
 
 function Landing() {
@@ -14,9 +14,9 @@ function Landing() {
         <>
             <Router>
                 <Switch>
-                    <Route path="/blogs">
+                    {/* <Route path="/blogs">
                         <Blogs />
-                    </Route>
+                    </Route> */}
                     <Route path="/">
                         <div className="container">
                             <section className="header">
@@ -29,7 +29,7 @@ function Landing() {
                                 <Skills />
                             </section>
                             <section className="navigation">
-                                <Navigation />>
+                                <Navigation />
                             </section>
                             <section className="key">
                                 <Key />
